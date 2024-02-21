@@ -2,7 +2,7 @@
 
 "Space Ronin" is a classic 2D space shooter with a backstory and fun game mechanics. You can watch a [video showcase](https://www.youtube.com/watch?v=8sJFVolDWoY) of the project or play it yourself [here](https://wgrodzicki.itch.io/space-ronin).
 
-![Cover](Assets/Art/Other/cover.png)
+![Cover](Assets/Art/Other/cover-cropped.png)
 
 ## **Technologies used**
 
