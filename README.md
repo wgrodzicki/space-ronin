@@ -2,7 +2,7 @@
 
 "Space Ronin" is a classic 2D space shooter with a backstory and fun game mechanics. You can watch a [video showcase](https://www.youtube.com/watch?v=8sJFVolDWoY) of the project or play it yourself [here](https://wgrodzicki.itch.io/space-ronin).
 
-![Cover](SpaceRonin/AssetsArt/Other/cover.png)
+![Cover](Assets/Art/Other/cover.png)
 
 ## **Technologies used**
 
@@ -18,7 +18,7 @@ You are a space ronin - a space mercenary - hired to get rid of galactic pirates
 
 During the game you progress through 3 differently designed levels. At the beginning of each level I included an introduction that informs you about the challenges you will face and the specific goal to accomplish in order to win.
 
-![Level 1](SpaceRonin/AssetsArt/Other/lvl1.png)
+![Level 1](Assets/Art/Other/lvl1.png)
 
 #### Unique mechanics
 
@@ -28,7 +28,7 @@ There are several unique game mechanics you will encounter, such as:
 - destroyable environment elements
 - objects that need protection from the enemies
 
-![Level 2](SpaceRonin/AssetsArt/Other/lvl2.png)
+![Level 2](Assets/Art/Other/lvl2.png)
 
 #### Power-ups
 
@@ -37,7 +37,7 @@ There are 2 types of power-ups that help to get through the levels more easily:
 - health restoration power-up
 - shooting enhancer power-up
 
-![Level 3](SpaceRonin/AssetsArt/Other/lvl3.png)
+![Level 3](Assets/Art/Other/lvl3.png)
 
 ## **How to play?**
 
