@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     public bool gameIsWinnable = true;
     [Tooltip("The number of enemies that must be defeated to win the game")]
     public int enemiesToDefeat = 10;
-    
+
     // The number of enemies defeated in game
     private int enemiesDefeated = 0;
 
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
     // Whether or not the game is won
     [HideInInspector]
     public bool gameIsWon = false;
-    
+
     //The number of enemies observed by the game manager in this scene at start up"
     private int numberOfEnemiesFoundAtStart;
 
@@ -93,11 +93,13 @@ public class GameManager : MonoBehaviour
         }
 
         // Make sure both winning settings are never true at the same time
-        if (gameIsWinnable) {
+        if (gameIsWinnable)
+        {
             notCountingEnemies = false;
         }
 
-        if (notCountingEnemies) {
+        if (notCountingEnemies)
+        {
             gameIsWinnable = false;
         }
     }
@@ -162,7 +164,7 @@ public class GameManager : MonoBehaviour
         int numberOfInfiniteSpawners = 0;
         int enemiesFromSpawners = 0;
         int enemiesFromStatic = staticEnemies.Count;
-        foreach(EnemySpawner enemySpawner in enemySpawners)
+        foreach (EnemySpawner enemySpawner in enemySpawners)
         {
             if (enemySpawner.spawnInfinite)
             {
@@ -184,7 +186,7 @@ public class GameManager : MonoBehaviour
             }
             else if (enemiesToDefeat > numberOfEnemiesFoundAtStart)
             {
-                Debug.LogWarning("There are " + enemiesToDefeat + " enemies to defeat but only " + numberOfEnemiesFoundAtStart + 
+                Debug.LogWarning("There are " + enemiesToDefeat + " enemies to defeat but only " + numberOfEnemiesFoundAtStart +
                     " enemies found at start \nThe level can not be completed!");
             }
             else
@@ -222,10 +224,11 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameWon()
     {
-        if (notCountingEnemies) {
+        if (notCountingEnemies)
+        {
             LevelCleared();
         }
-    }    
+    }
 
     /// <summary>
     /// Description:
@@ -259,7 +262,7 @@ public class GameManager : MonoBehaviour
         }
         UpdateUIElements();
     }
-    
+
     /// <summary>
     /// Description:
     /// Resets the current player score
@@ -347,7 +350,7 @@ public class GameManager : MonoBehaviour
             {
                 Instantiate(victoryEffect, transform.position, transform.rotation, null);
             }
-        }     
+        }
     }
 
     [Header("Game Over Settings:")]

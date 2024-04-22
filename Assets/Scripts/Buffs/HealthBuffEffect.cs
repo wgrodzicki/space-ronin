@@ -26,7 +26,7 @@ public class HealthBuffEffect : MonoBehaviour
             playerHealth.currentHealth++;
             GameManager.UpdateUIElements();
             Instantiate(healthBuffEffect, transform.position, transform.rotation, null);
-            
+
             // Destroy the buff
             Destroy(this.gameObject);
         }

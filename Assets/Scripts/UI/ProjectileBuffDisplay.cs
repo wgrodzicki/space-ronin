@@ -5,7 +5,7 @@ public class ProjectileBuffDisplay : UIelement
 {
     [Tooltip("The text UI to use for display")]
     [SerializeField] private Text displayText = null;
-    
+
     [HideInInspector] public bool buffIsActive = false;
     [HideInInspector] public float remainingTime = 0;
 
@@ -15,7 +15,7 @@ public class ProjectileBuffDisplay : UIelement
     public void DisplayProjectileBuff()
     {
         if (buffIsActive)
-        {   
+        {
             if (GameManager.instance.gameIsOver != true)
             {
                 if (GameManager.instance.gameIsWon != true)
@@ -24,7 +24,7 @@ public class ProjectileBuffDisplay : UIelement
                     {
                         displayText.text = "Quickshot: " + (int)remainingTime;
                     }
-                }    
+                }
             }
         }
         else

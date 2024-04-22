@@ -51,11 +51,12 @@ public class Health : MonoBehaviour
     {
         SetRespawnPoint(transform.position);
         // Save player's movement speed and get its shooting controller for respawning purposes
-        if (gameObject.tag == "Player") {
+        if (gameObject.tag == "Player")
+        {
             playerController = gameObject.GetComponent<Controller>();
             playerSpeed = playerController.moveSpeed;
             playerShootingController = gameObject.GetComponent<ShootingController>();
-        }   
+        }
     }
 
     // Variables to control the respawn moment
@@ -87,23 +88,29 @@ public class Health : MonoBehaviour
     /// Returns:
     /// void (no return)
     /// </summary>    
-    private void HandleRespawn() {
+    private void HandleRespawn()
+    {
         // Check if the health should respawn
-        if (shouldRespawn == true) {
+        if (shouldRespawn == true)
+        {
             // If health is player, stop it from moving and shooting
-            if (gameObject.tag == "Player") {
+            if (gameObject.tag == "Player")
+            {
                 playerController.moveSpeed = 0;
                 playerShootingController.enabled = false;
             }
             // Start the timer if so
-            if (respawnTimer == false) {
+            if (respawnTimer == false)
+            {
                 timeToRespawn = Time.time + respawnDelay;
                 respawnTimer = true;
             }
             // Respawn the health if enough time has passed
-            if (Time.time >= timeToRespawn) {
+            if (Time.time >= timeToRespawn)
+            {
                 // If health is the player, restore its original movement speed and enable shooting
-                if (gameObject.tag == "Player") {
+                if (gameObject.tag == "Player")
+                {
                     playerController.moveSpeed = playerSpeed;
                     playerShootingController.enabled = true;
                 }
@@ -172,7 +179,8 @@ public class Health : MonoBehaviour
         respawnTimer = false;
 
         // If health is player, update UI to display current health
-        if (gameObject.tag == "Player") {
+        if (gameObject.tag == "Player")
+        {
             GameManager.UpdateUIElements();
         }
     }
@@ -203,7 +211,8 @@ public class Health : MonoBehaviour
             currentHealth -= damageAmount;
 
             // If health is player, freighter or boss, update UI to display current health
-            if (gameObject.tag == "Player" || gameObject.tag == "Freighter" || gameObject.tag == "Boss") {
+            if (gameObject.tag == "Player" || gameObject.tag == "Freighter" || gameObject.tag == "Boss")
+            {
                 GameManager.UpdateUIElements();
             }
 
@@ -279,7 +288,7 @@ public class Health : MonoBehaviour
         else
         {
             HandleDeathWithoutLives();
-        }      
+        }
     }
 
     /// <summary>
@@ -311,13 +320,15 @@ public class Health : MonoBehaviour
                 gameObject.GetComponent<Enemy>().DoBeforeDestroy();
             }
             // Game over if health is the object to be protected
-            if (gameObject.tag == "Freighter") {
+            if (gameObject.tag == "Freighter")
+            {
                 GameManager.instance.GameOver();
                 // Disable player's controls if game over
                 GameManager.instance.player.SetActive(false);
             }
             // Game won if health is a boss
-            if (gameObject.tag == "Boss") {
+            if (gameObject.tag == "Boss")
+            {
                 GameManager.instance.GameWon();
                 // Disable player's controls if game over
                 GameManager.instance.player.SetActive(false);
@@ -345,13 +356,15 @@ public class Health : MonoBehaviour
             gameObject.GetComponent<Enemy>().DoBeforeDestroy();
         }
         // Game over if health is the object to be protected
-        if (gameObject.tag == "Freighter") {
+        if (gameObject.tag == "Freighter")
+        {
             GameManager.instance.GameOver();
             // Disable player's controls if game over
             GameManager.instance.player.SetActive(false);
         }
         // Game won if health is a boss
-        if (gameObject.tag == "Boss") {
+        if (gameObject.tag == "Boss")
+        {
             GameManager.instance.GameWon();
             // Disable player's controls if game over
             GameManager.instance.player.SetActive(false);

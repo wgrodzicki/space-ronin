@@ -90,7 +90,7 @@ public class CameraController : MonoBehaviour
             Vector3 desiredCameraPosition = ComputeCameraPosition(targetPosition, mousePosition);
 
             transform.position = desiredCameraPosition;
-        }      
+        }
     }
 
     /// <summary>

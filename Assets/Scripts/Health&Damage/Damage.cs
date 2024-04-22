@@ -94,7 +94,8 @@ public class Damage : MonoBehaviour
             if (collidedHealth.teamId != this.teamId)
             {
                 // Prevent enemies from dealing damage to destructible environment elements
-                if ((collisionGameObject.tag == "Destructible" && (this.gameObject.tag == "EnemyProjectile" || this.gameObject.tag == "Kamikaze")) != true) {
+                if ((collisionGameObject.tag == "Destructible" && (this.gameObject.tag == "EnemyProjectile" || this.gameObject.tag == "Kamikaze")) != true)
+                {
                     collidedHealth.TakeDamage(damageAmount);
                 }
                 if (hitEffect != null)
@@ -108,13 +109,16 @@ public class Damage : MonoBehaviour
                         gameObject.GetComponent<Enemy>().DoBeforeDestroy();
                     }
                     // Destroy "kamikaze" chasers only when colliding with the player
-                    if (this.gameObject.tag == "Kamikaze") {
-                        if (collisionGameObject.tag == "Player") {
+                    if (this.gameObject.tag == "Kamikaze")
+                    {
+                        if (collisionGameObject.tag == "Player")
+                        {
                             gameObject.GetComponent<Enemy>().DoBeforeDestroy();
                             Destroy(this.gameObject);
                         }
                     }
-                    else {
+                    else
+                    {
                         Destroy(this.gameObject);
                     }
                 }

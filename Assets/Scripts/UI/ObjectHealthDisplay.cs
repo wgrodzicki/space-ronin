@@ -27,13 +27,15 @@ public class ObjectHealthDisplay : UIelement
     {
         if (displayText != null)
         {
-            if (targetObject.GetComponent<Health>().currentHealth <= 0) {
+            if (targetObject.GetComponent<Health>().currentHealth <= 0)
+            {
                 displayText.text = targetObject.name + " health: 0";
             }
-            else {
+            else
+            {
                 displayText.text = targetObject.name + " health: " + targetObject.GetComponent<Health>().currentHealth.ToString();
             }
-            
+
         }
     }
 

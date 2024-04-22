@@ -27,9 +27,10 @@ public class RotateAroundMine : MonoBehaviour
     // Variable to control whether the data has been set
     // private bool dataSet = false;
 
-    void SetData() {
+    void SetData()
+    {
         radius = Vector2.Distance(objectRotated.transform.position, objectAround.transform.position);
-        
+
         xAround = objectAround.transform.position.x;
         yAround = objectAround.transform.position.y;
         zAround = objectAround.transform.position.z;
@@ -39,23 +40,29 @@ public class RotateAroundMine : MonoBehaviour
         zRotated = objectRotated.transform.position.z;
     }
 
-    void Rotate() {
+    void Rotate()
+    {
 
         // Top of the coord system
-        if (yRotated >= yAround || xRotated == xAround - radius) {
-            if (xRotated <= xAround + radius) {
+        if (yRotated >= yAround || xRotated == xAround - radius)
+        {
+            if (xRotated <= xAround + radius)
+            {
                 xRotated += rotationSpeed;
 
-                if (Mathf.Pow(radius, 2.0f) > Mathf.Pow(xRotated - xAround, 2.0f)) {
+                if (Mathf.Pow(radius, 2.0f) > Mathf.Pow(xRotated - xAround, 2.0f))
+                {
                     yRotated = yAround + Mathf.Sqrt(Mathf.Pow(radius, 2.0f) - Mathf.Pow((xRotated - xAround), 2.0f));
                 }
-                else {
+                else
+                {
                     yRotated = yAround;
                 }
 
                 objectRotated.transform.position = new Vector3(xRotated, yRotated, zRotated);
             }
-            else if (xRotated > xAround + radius) {
+            else if (xRotated > xAround + radius)
+            {
                 xRotated = xAround + radius;
                 yRotated = yAround + Mathf.Sqrt(Mathf.Pow(radius, 2.0f) - Mathf.Pow((xRotated - xAround), 2.0f));
 
@@ -63,20 +70,25 @@ public class RotateAroundMine : MonoBehaviour
             }
         }
         // Bottom of the coord system
-        else if (yRotated < yAround || xRotated == xAround + radius) {
-            if (xRotated >= xAround - radius) {
+        else if (yRotated < yAround || xRotated == xAround + radius)
+        {
+            if (xRotated >= xAround - radius)
+            {
                 xRotated -= rotationSpeed;
-                
-                if (Mathf.Pow(radius, 2.0f) > Mathf.Pow(xRotated - xAround, 2.0f)) {
+
+                if (Mathf.Pow(radius, 2.0f) > Mathf.Pow(xRotated - xAround, 2.0f))
+                {
                     yRotated = yAround + Mathf.Sqrt(Mathf.Pow(radius, 2.0f) - Mathf.Pow((xRotated - xAround), 2.0f));
                 }
-                else {
+                else
+                {
                     yRotated = yAround;
                 }
 
                 objectRotated.transform.position = new Vector3(xRotated, yRotated, zRotated);
             }
-            else if (xRotated < xAround - radius) {
+            else if (xRotated < xAround - radius)
+            {
                 xRotated = xAround - radius;
                 yRotated = yAround - Mathf.Sqrt(Mathf.Pow(radius, 2.0f) - Mathf.Pow((xRotated - xAround), 2.0f));
 

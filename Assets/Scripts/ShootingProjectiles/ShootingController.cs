@@ -35,7 +35,7 @@ public class ShootingController : MonoBehaviour
 
     //The input manager which manages player input
     private InputManager inputManager = null;
-    
+
     // Variable to control whether this object (player by default) has projectile buff
     public bool hasBuff = false;
 
@@ -106,7 +106,7 @@ public class ShootingController : MonoBehaviour
             {
                 Fire();
             }
-        }   
+        }
     }
 
     /// <summary>

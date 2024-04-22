@@ -23,13 +23,15 @@ public class HealthDisplay : UIelement
     {
         if (displayText != null)
         {
-            if (GameManager.instance.player.GetComponent<Health>().currentHealth <= 0) {
+            if (GameManager.instance.player.GetComponent<Health>().currentHealth <= 0)
+            {
                 displayText.text = "Health: 0";
             }
-            else {
+            else
+            {
                 displayText.text = "Health: " + GameManager.instance.player.GetComponent<Health>().currentHealth.ToString();
             }
-            
+
         }
     }
 

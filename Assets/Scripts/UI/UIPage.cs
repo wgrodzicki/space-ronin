@@ -30,6 +30,6 @@ public class UIPage : MonoBehaviour
             GameManager.UpdateUIElements();
             //!!
         }
-        
+
     }
 }

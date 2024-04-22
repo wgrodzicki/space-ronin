@@ -49,7 +49,7 @@ public class ProjectileBuffEffect : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         playerShooting = player.GetComponent<ShootingController>();
-        
+
         if (playerShooting.hasBuff != true)
         {
             playerFireRate = playerShooting.fireRate;
