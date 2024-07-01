@@ -57,7 +57,7 @@ When designing and implementing the project I stumbled upon several challenges:
 
 Created by Wojciech Grodzicki.
 
-- Base scripts and assets by the [Michigan State University](https://www.coursera.org/learn/game-design-and-development-1)
+- Starting assets and scripts by the [Michigan State University](https://www.coursera.org/learn/game-design-and-development-1)
 - Health buff asset by [shinzohotoroki](https://opengameart.org/users/shinzohotoroki) via [OpenGameArt](https://opengameart.org/content/heart-3)
 - Font by Ethan Park via [CreativeAlys](https://www.creativealys.com/2015/09/01/aperture-digital-typeface/)
 - Cover & icon created using AI from [OpenArt](https://openart.ai/)
