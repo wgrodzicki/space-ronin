@@ -1,8 +1,11 @@
 # **Space Ronin**
 
-"Space Ronin" is a classic 2D space shooter with a backstory and fun game mechanics. You can watch a [video showcase](https://www.youtube.com/watch?v=8sJFVolDWoY) of the project or play it yourself [here](https://wgrodzicki.itch.io/space-ronin).
+> [!NOTE]
+> This repo contains the source code of my "Space Ronin" game available [here](https://wgrodzicki.itch.io/space-ronin).
 
-![Cover](Assets/Art/Other/cover-cropped.png)
+"Space Ronin" is a classic 2D space shooter with a backstory and fun game mechanics. You can watch a video showcase of the project on [my YouTube channel](https://www.youtube.com/watch?v=8sJFVolDWoY).
+
+![Cover](Images/cover-cropped.png)
 
 ## **Technologies used**
 
@@ -18,7 +21,7 @@ You are a space ronin - a space mercenary - hired to get rid of galactic pirates
 
 During the game you progress through 3 differently designed levels. At the beginning of each level I included an introduction that informs you about the challenges you will face and the specific goal to accomplish in order to win.
 
-![Level 1](Assets/Art/Other/lvl1.png)
+![Level 1](Images/lvl1.png)
 
 #### Unique mechanics
 
@@ -28,7 +31,7 @@ There are several unique game mechanics you will encounter, such as:
 - destroyable environment elements
 - objects that need protection from the enemies
 
-![Level 2](Assets/Art/Other/lvl2.png)
+![Level 2](Images/lvl2.png)
 
 #### Power-ups
 
@@ -37,7 +40,7 @@ There are 2 types of power-ups that help to get through the levels more easily:
 - health restoration power-up
 - shooting enhancer power-up
 
-![Level 3](Assets/Art/Other/lvl3.png)
+![Level 3](Images/lvl3.png)
 
 ## **How to play?**
 
@@ -57,7 +60,7 @@ When designing and implementing the project I stumbled upon several challenges:
 
 Created by Wojciech Grodzicki.
 
-- Starting assets and scripts by the [Michigan State University](https://www.coursera.org/learn/game-design-and-development-1)
+- Initial project template (base assets and scripts) by the [Michigan State University](https://www.coursera.org/learn/game-design-and-development-1)
 - Health buff asset by [shinzohotoroki](https://opengameart.org/users/shinzohotoroki) via [OpenGameArt](https://opengameart.org/content/heart-3)
 - Font by Ethan Park via [CreativeAlys](https://www.creativealys.com/2015/09/01/aperture-digital-typeface/)
 - Cover & icon created using AI from [OpenArt](https://openart.ai/)
